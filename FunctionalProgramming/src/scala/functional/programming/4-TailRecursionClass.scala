@@ -1,7 +1,9 @@
 package scala.functional.programming
 
+import scala.annotation.tailrec
+
 class Test1 {
-  def factorial(n: Int): Int = {
+  @tailrec def factorial(n: Int): Int = {
     def fact(n: Int, acc: Int): Int = n match {
       case 0 => acc
       case m => fact(m-1, acc*m)
